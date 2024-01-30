@@ -16,6 +16,11 @@ This method duplicates nodes with self-loops, and links the duplicated nodes wit
 
 This can be applied to matrimonial networks where there are marriages among members of the same family, or any other type of network with self-loops, and allows to applicate centrality (and other) measures, obtaining a meaningful and more accurate result
 }
+
+\references{
+\insertAllCited{}
+}
+
 \examples{
 V1 <- c("A", "A","B","C","D","E")
 V2 <- c("A", "B","C","D","E","A")
