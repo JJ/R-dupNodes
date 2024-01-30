@@ -1,0 +1,35 @@
+library(igraph)
+# Hello, world!
+#
+# This is an example function named 'hello'
+# which prints 'Hello, world!'.
+#
+# You can learn more about package authoring with RStudio at:
+#
+#   http://r-pkgs.had.co.nz/
+#
+# Some useful keyboard shortcuts for package authoring:
+#
+#   Install Package:           'Ctrl + Shift + B'
+#   Check Package:             'Ctrl + Shift + E'
+#   Test Package:              'Ctrl + Shift + T'
+
+dup.nodes.from.data.frame <- function( df, first.node="V1", second.node="V2" ) {
+  names(df)[ names(df) == first.node ] <- "first.node"
+  names(df)[ names(df) == second.node ] <- "second.node"
+
+  self.loops <- df[ df$first.node == df$second.node, ]
+  all.self.loops <- unique(self.loops$first.node)
+  dup.df <- df[ df$first.node != df$second.node, ]
+  dups.1 <- df[ df$first.node %in% all.self.loops, ]
+  dups.1$first.node <- paste0(dups.1$first.node, "'")
+  dups.df <- rbind(dup.df, dups.1)
+  dups.2 <- df[ df$second.node %in% all.self.loops, ]
+  dups.2$second.node <- paste0(dups.2$second.node, "'")
+  dups.df <- rbind(dup.df, dups.2)
+
+  self.loops$second.node <- paste0(self.loops$second.node, "'")
+  dups.df <- rbind(dup.df, self.loops)
+
+  return( graph.data.frame(data.frame(dups.df$first.node, dups.df$second.node), directed=FALSE) )
+}
