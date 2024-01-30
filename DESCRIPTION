@@ -1,14 +1,25 @@
 Package: dupNodes
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Creates an iGraph object that duplicates nodes with self-loops
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Juan Julián Merelo-Guervós
+Maintainer: Juan Julián Merelo-Guervós <jjmerelo@gmail.com>
+Description: Creates a new graph from an existing one, duplicating nodes
+    with self-loops. This can be used for a computation of betweenness centrality that does not drop this essential information
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
+Depends:
+    R (>= 3.5.0)
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+Imports:
+    Rdpack,
+    knitr,
+    igraph,
+    qpdf,
+    rmarkdown
+VignetteBuilder: knitr
+RdMacros: Rdpack
+RoxygenNote: 7.2.1
