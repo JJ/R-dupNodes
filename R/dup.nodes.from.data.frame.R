@@ -19,6 +19,10 @@ dup.nodes.from.data.frame <- function( df, first.node="V1", second.node="V2" ) {
   names(df)[ names(df) == second.node ] <- "second.node"
 
   self.loops <- df[ df$first.node == df$second.node, ]
+  if ( nrow(self.loops) == 0 ) {
+    return( graph.data.frame(df, directed=FALSE) )
+  }
+
   all.self.loops <- unique(self.loops$first.node)
   dup.df <- df[ df$first.node != df$second.node, ]
   dups.1 <- df[ df$first.node %in% all.self.loops, ]

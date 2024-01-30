@@ -19,3 +19,10 @@ test_that("Graph with custom values", {
   dup.graph <- dup.nodes.from.data.frame(df, first.node="node1", second.node="node2")
   expect_equal( length(V(dup.graph)), length(different.nodes)+1 )
 })
+
+test_that("Does not change if no self-loops", {
+  letters.3 <- c("A","B","C")
+  df <- data.frame(V1=letters.3, V2=c("B","C","A"))
+  unchanged.graph <- dup.nodes.from.data.frame(df)
+  expect_equal( length(V(unchanged.graph)), length(letters.3) )
+})
