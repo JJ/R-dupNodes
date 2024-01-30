@@ -2,7 +2,12 @@
 \alias{dup.nodes.from.data.frame}
 \title{Creates an igraph object from a data frame with self-loops}
 \usage{
-  dup.graph <- dup.nodes.from.data.frame(df)
+dup.nodes.from.data.frame(df,first.node="V1",second.node="V2")
+}
+\arguments{
+\item{df}{A data frame that should include at least two columns with the names of the nodes}
+\item{first.node}{The column that indicates the node that's linked}
+\item{second.node}{The column that indicates the other node that's linked}
 }
 \description{
 This is an implementation of the method published in the paper "Intra-family links in the analysis of marital networks", which proposed a duplication of nodes that includes self-loops to get a reflect better (and include all information about) the status of all nodes in the network.

@@ -5,7 +5,8 @@ Version: 0.1.0
 Author: Juan Julián Merelo-Guervós
 Maintainer: Juan Julián Merelo-Guervós <jjmerelo@gmail.com>
 Description: Creates a new graph from an existing one, duplicating nodes
-    with self-loops. This can be used for a computation of betweenness centrality that does not drop this essential information
+    with self-loops. This can be used for a computation of betweenness 
+    centrality that does not drop this essential information.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
@@ -22,4 +23,4 @@ Imports:
     rmarkdown
 VignetteBuilder: knitr
 RdMacros: Rdpack
-RoxygenNote: 7.2.1
+RoxygenNote: 7.2.3
