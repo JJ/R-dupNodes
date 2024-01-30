@@ -1,0 +1,15 @@
+cff-version: 1.1.0
+message: "If you use this software, please cite it using these metadata."
+authors: 
+  - family-names: Merelo
+    given-names: JJ
+    orcid: "https://orcid.org/0000-0002-1385-9741"
+  - family-names: Molinari
+    given-names: M. Cristina
+    orcid: "https://orcid.org/0000-0002-6380-6795"
+
+title: "Intra-family links in the analysis of marital networks"
+version: 0.1.0
+date-released: 2024-02-01
+license: "CC0-1.0"
+repository-code: "https://github.com/JJ/R-dupNodes"
