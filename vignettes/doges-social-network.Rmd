@@ -64,13 +64,18 @@ knitr::kable(head(sort(original.betweenness, decreasing=TRUE)))
 knitr::kable(head(sort(dnsl.betweenness, decreasing=TRUE)))
 ```
 
-There is a dramatic change, due to the fact that there were very few central families, and some of the most prominent had self-loops. We can see the graph with duplicated nodes here
+There is some change, due to the fact that there were very few central families, and some of the most prominent had self-loops. We can see the graph with duplicated nodes here
 
 ```{r graph}
 dup.graph <- dup.nodes.from.data.frame(
-  data.frame(married.doges$Family.doge, married.doges$Family.dogaressa)
+  data.frame(V1=married.doges$Family.doge, V2=married.doges$Family.dogaressa)
   )
-plot(dup.graph)
+components <- igraph::clusters(dup.graph, mode="weak")
+biggest_cluster_id <- which.max(components$csize)
+vert_ids <- V(dup.graph)[components$membership == biggest_cluster_id]
+
+doges.sn.connected <- igraph::induced_subgraph(dup.graph, vert_ids)
+plot(doges.sn.connected,layout=layout_with_fr, vertex.label.cex=0.7)
 ```
 
 ## Conclusions
