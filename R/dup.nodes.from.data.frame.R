@@ -1,18 +1,5 @@
 library(igraph)
-# Hello, world!
-#
-# This is an example function named 'hello'
-# which prints 'Hello, world!'.
-#
-# You can learn more about package authoring with RStudio at:
-#
-#   http://r-pkgs.had.co.nz/
-#
-# Some useful keyboard shortcuts for package authoring:
-#
-#   Install Package:           'Ctrl + Shift + B'
-#   Check Package:             'Ctrl + Shift + E'
-#   Test Package:              'Ctrl + Shift + T'
+# Duplicates nodes using as input a data frame with nodes in two columns
 
 dup.nodes.from.data.frame <- function( df, first.node="V1", second.node="V2" ) {
   names(df)[ names(df) == first.node ] <- "first.node"
