@@ -8,7 +8,7 @@ This is an implementation of the method published in the paper "Intra-family lin
 betweenness.with.duplicated.nodes(dup.graph)
 }
 \arguments{
-\item{graph.with.duplicated.nodes}{A graph object that has already duplicated nodes with self-loops. Essentially, it will recognize duplicated nodes as those with a prime at the end. Will not return betweenness value for these (it will be exactly the same as the other one).}
+\item{dup.graph}{A graph object that has already duplicated nodes with self-loops. Essentially, it will recognize duplicated nodes as those with a prime at the end. Will not return betweenness value for these (it will be exactly the same as the other one).}
 }
 \details{
 This method computes betweenness centrality in the regular way; it will only return values for the "original" nodes, however.
