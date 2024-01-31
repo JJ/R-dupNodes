@@ -29,7 +29,7 @@ V2 <- c("A", "B","C","D","E","A")
 df <- data.frame(V1, V2)
 
 dup.graph <- dup.nodes.from.data.frame(df)
-print(incident(dup.graph),"A")
+print(incident(dup.graph,"A"))
 }
 \keyword{Social networks}
 \keyword{Seudographs}
