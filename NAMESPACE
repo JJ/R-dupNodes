@@ -1,4 +1,4 @@
 exportPattern("^[[:alpha:]]+")
 
-importFrom(igraph,graph.data.frame,V,"V<-")
+importFrom(igraph,graph_from_data_frame,V,"V<-")
 
