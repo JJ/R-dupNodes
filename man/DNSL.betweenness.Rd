@@ -5,7 +5,7 @@
 Computes the betweenness of nodes in a graph that includes self-loops directly.
 }
 \usage{
-DNSL.betweenness.with.duplicated.nodes(df,first.node = "V1",second.node = "V2")
+DNSL.betweenness(df,first.node = "V1",second.node = "V2")
 }
 \arguments{
 \item{df}{A data frame that should include at least two columns with the names of the nodes}

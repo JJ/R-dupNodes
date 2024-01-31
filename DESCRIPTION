@@ -7,7 +7,7 @@ Maintainer: Juan Julián Merelo-Guervós <jjmerelo@gmail.com>
 Description: Creates a new graph from an existing one, duplicating nodes
     with self-loops. This can be used for a computation of betweenness 
     centrality that does not drop this essential information.
-License: GPL-3 + LICENSE file
+License: GPL-3 + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Depends:

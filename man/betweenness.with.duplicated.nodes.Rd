@@ -5,7 +5,7 @@
 This is an implementation of the method published in the paper "Intra-family links in the analysis of marital networks", which proposed a duplication of nodes that includes self-loops to get a reflect better (and include all information about) the status of all nodes in the network, computing betweenness ignoring the duplicated nodes.
 }
 \usage{
-betweenness.with.duplicated.nodes(graph.with.duplicated.nodes)
+betweenness.with.duplicated.nodes(dup.graph)
 }
 \arguments{
 \item{graph.with.duplicated.nodes}{A graph object that has already duplicated nodes with self-loops. Essentially, it will recognize duplicated nodes as those with a prime at the end. Will not return betweenness value for these (it will be exactly the same as the other one).}
