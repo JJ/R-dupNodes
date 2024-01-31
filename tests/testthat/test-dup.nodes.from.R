@@ -38,6 +38,6 @@ test_that("Works with two connected nodes with self-loops", {
   dup.graph <- dup.nodes.from.data.frame(df)
   expect_equal( length(V(dup.graph)), length(unique(c(V1, V2)))+2 )
   expect_equal( length(E(dup.graph)[ "A" %--% "B'"] ),1)
-  expect_equal( length(incident(dup.graph,"A")), length(incident(dup.graph,"A'")) + 1)
-  expect_equal( length(incident(dup.graph,"B")), length(incident(dup.graph,"B'")) + 1)
+  expect_equal( length(incident(dup.graph,"A")), length(incident(dup.graph,"A'")))
+  expect_equal( length(incident(dup.graph,"B")), length(incident(dup.graph,"B'")))
 })

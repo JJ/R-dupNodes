@@ -30,7 +30,7 @@ dup.nodes.from.data.frame <- function( df, first.node="V1", second.node="V2" ) {
   dups.1 <- copy.df[ copy.df$first.node %in% all.self.loops, ]
   dups.1$first.node <- paste0(dups.1$first.node, "'")
   dup.df <- rbind(dup.df, dups.1)
-  dups.2 <- copy.df[ copy.df$second.node %in% all.self.loops, ]
+  dups.2 <- dup.df[ dup.df$second.node %in% all.self.loops, ]
   dups.2$second.node <- paste0(dups.2$second.node, "'")
   dup.df <- rbind(dup.df, dups.2)
 
