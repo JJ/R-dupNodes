@@ -20,7 +20,7 @@ dup.nodes.from.data.frame <- function( df, first.node="V1", second.node="V2" ) {
 
   self.loops <- df[ df$first.node == df$second.node, ]
   if ( nrow(self.loops) == 0 ) {
-    return( graph.data.frame(df, directed=FALSE) )
+    return( graph_from_data_frame(df, directed=FALSE) )
   }
 
   all.self.loops <- unique(self.loops$first.node)
@@ -37,5 +37,5 @@ dup.nodes.from.data.frame <- function( df, first.node="V1", second.node="V2" ) {
   self.loops$second.node <- paste0(self.loops$second.node, "'")
   dups.df <- rbind(dup.df, self.loops)
 
-  return( graph.data.frame(data.frame(dups.df$first.node, dups.df$second.node), directed=FALSE) )
+  return( graph_from_data_frame(data.frame(dups.df$first.node, dups.df$second.node), directed=FALSE) )
 }
