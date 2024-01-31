@@ -15,7 +15,7 @@ dup.nodes.from.data.frame(df,first.node="V1",second.node="V2")
 \details{
 This method duplicates nodes with self-loops, and links the duplicated nodes with the original with a weight that is equal to the number of self-loops.
 
-This can be applied to matrimonial networks where there are marriages among members of the same family, or any other type of network with self-loops, and allows to applicate centrality (and other) measures, obtaining a meaningful and more accurate result
+This can be applied to matrimonial networks where there are marriages among members of the same family, or any other type of network with self-loops, and allows to apply centrality (and other) measures, obtaining a meaningful and more accurate result
 }
 \value{An igraph object with all nodes with self-loops duplicated. These newly created nodes will have the same name as the original, with a "'" added.}
 
