@@ -1,0 +1,75 @@
+---
+title: "Computing the betweenness of the doges social network using DNSL method"
+author: "JJ Merelo"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Computing the betweenness of the doges social network using DNSL method}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+bibliography: ../inst/doges.bib
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Introduction
+
+Using data from `dogesr` [@dogesr], we will, in this vignette, *correct* the betweenness centrality of the doges social network, which was computed using the `igraph` package, and therefore does not take into account self-loops. We will use the `dupNodes` package [@dupNodes] to compute the betweenness centrality of the doges social network, which is a network with self-loops.
+
+## Set up
+
+```{r load, warning=FALSE,message=FALSE}
+library(dogesr)
+library(dupNodes)
+data("doges")
+```
+
+This loads the two involved libraries, as well as loads the data frame `data.doges` that contains data on all doges, including who they married to. Let us see how many self-loops are there
+
+```{r self.loops}
+family.marriages <- data.doges[ data.doges$Family.doge == data.doges$Family.dogaressa,]
+```
+
+So we have 7 self-loops, including 5 different families. It's not a lot, but quite enough to make a difference in the status of certain families as expressed by betweenness centrality. These are the families with self-loops:
+
+```{r self.loops.families}
+knitr::kable(table(family.marriages$Family.doge))
+```
+
+Let's compute betweenness centrality, with and without self-loops, and see the difference, after extracting only those doges that actually married
+
+```{r betweenness}
+library(igraph)
+married.doges <- data.doges[ data.doges$Family.dogaressa != '',]
+original.betweenness <- betweenness(
+  graph_from_data_frame(
+    data.frame(married.doges$Family.doge, married.doges$Family.dogaressa, directed=FALSE)
+    )
+  )
+dnsl.betweenness <- DNSL.betweenness(
+  married.doges, 
+  first.node="Family.doge", 
+  second.node="Family.dogaressa")
+```
+
+Which, shown sorted in a table, are:
+
+```{r betweenness.table}
+knitr::kable(head(sort(original.betweenness, decreasing=TRUE)))
+knitr::kable(head(sort(dnsl.betweenness, decreasing=TRUE)))
+```
+
+
+
+## Conclusions
+
+Extending the social network of doges to include their parents, which is a way of having a better sample of the patrician social network in the Republic of Venice, has allowed us to have a marginally better picture of social dynamics and social capital in the republic of Venice. Although large scale structure has not changed much, with the well known families such as Contarini or Morosini, taking the most central positions, the connections between families are better rendered with these additions.
+
+However, this is only the case for the Foscari-Sagredo link; in the case of Loredan-Pasqualigo, it was an addition from the previous version of this dataset. At any rate, using a dataset that is continuously improved and enhanced allows digital humanities researchers have a better picture of the society they are researching.
+
+## References
