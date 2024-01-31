@@ -24,13 +24,15 @@ dup.nodes.from.data.frame <- function( df, first.node="V1", second.node="V2" ) {
   }
 
   all.self.loops <- unique(self.loops$first.node)
-  dup.df <- df[ df$first.node != df$second.node, ]
-  dups.1 <- df[ df$first.node %in% all.self.loops, ]
+
+  copy.df <- df[ df$first.node != df$second.node, ]
+  dup.df <- copy.df
+  dups.1 <- copy.df[ copy.df$first.node %in% all.self.loops, ]
   dups.1$first.node <- paste0(dups.1$first.node, "'")
-  dups.df <- rbind(dup.df, dups.1)
-  dups.2 <- df[ df$second.node %in% all.self.loops, ]
+  dup.df <- rbind(dup.df, dups.1)
+  dups.2 <- copy.df[ copy.df$second.node %in% all.self.loops, ]
   dups.2$second.node <- paste0(dups.2$second.node, "'")
-  dups.df <- rbind(dup.df, dups.2)
+  dup.df <- rbind(dup.df, dups.2)
 
   self.loops$second.node <- paste0(self.loops$second.node, "'")
   dups.df <- rbind(dup.df, self.loops)
