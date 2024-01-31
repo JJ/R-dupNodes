@@ -24,6 +24,7 @@ This can be applied to matrimonial networks where there are marriages among memb
 }
 
 \examples{
+library(igraph)
 V1 <- c("A", "A","B","C","D","E")
 V2 <- c("A", "B","C","D","E","A")
 df <- data.frame(V1, V2)
