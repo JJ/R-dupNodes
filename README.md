@@ -15,7 +15,7 @@ which has exactly the same degree; in this way, the weights of these self-loops
 can be taken into account when computing centrality measures such as
 betweenness.
 
-## Installation 
+## Installation
 
 Install released versions from CRAN as usual, or development version
 from here
@@ -40,6 +40,15 @@ Please cite this paper when using this package in your work
   month =     {January}
 }
 ```
+
+## Examples
+
+There are some examples explained in *vignettes*. Use `vignette("dupNodes")` to
+access all of chem, or individually:
+
+* `vignette("doges-social-network")` to apply functions here to data from the
+  package [`dogesr`](https://github.com/JJ/dogesr).
+
 
 ## License
 
