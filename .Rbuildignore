@@ -5,3 +5,4 @@
 img/
 
 CITATIONS.cff
+^cran-comments\.md$
