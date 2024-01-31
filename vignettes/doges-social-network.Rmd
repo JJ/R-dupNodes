@@ -60,11 +60,12 @@ dnsl.betweenness <- DNSL.betweenness(
 Which, shown sorted in a table, are:
 
 ```{r betweenness.table}
-knitr::kable(head(sort(original.betweenness, decreasing=TRUE)))
-knitr::kable(head(sort(dnsl.betweenness, decreasing=TRUE)))
+knitr::kable(head(sort(original.betweenness, decreasing=TRUE), n=10))
+knitr::kable(head(sort(dnsl.betweenness, n=10, decreasing=TRUE), n=10))
 ```
 
-There is some change, due to the fact that there were very few central families, and some of the most prominent had self-loops. We can see the graph with duplicated nodes here
+There is some change, due to the fact that there were very few central families, and some of the most prominent had self-loops. The Candiano family was very peripheral, and the change is not enough to make it scale the top 10; the Mocenigo and Gradenigo families have been the one that have changed the most, possibly due to the connection to these families with self-loops.
+We can see the graph with duplicated nodes here
 
 ```{r graph}
 dup.graph <- dup.nodes.from.data.frame(
@@ -80,8 +81,6 @@ plot(doges.sn.connected,layout=layout_with_fr, vertex.label.cex=0.7)
 
 ## Conclusions
 
-Extending the social network of doges to include their parents, which is a way of having a better sample of the patrician social network in the Republic of Venice, has allowed us to have a marginally better picture of social dynamics and social capital in the republic of Venice. Although large scale structure has not changed much, with the well known families such as Contarini or Morosini, taking the most central positions, the connections between families are better rendered with these additions.
-
-However, this is only the case for the Foscari-Sagredo link; in the case of Loredan-Pasqualigo, it was an addition from the previous version of this dataset. At any rate, using a dataset that is continuously improved and enhanced allows digital humanities researchers have a better picture of the society they are researching.
+Intra-family links have its importance in the status achieved by a family; not only supports its resilience, but also explains the position they have achieved. This is why it is important to include this new method to compute betweenness centrality, taking into account not only the existence of self-loops, but also its value. This `dupNodes` package, which is available in CRAN, can be used to correct betweenness centrality in any eligible network, as well as to represent the position in the network of these self-loops-converted-into-duplicated nodes so that it explains whatever change in the value of centrality or in ranking.
 
 ## References
