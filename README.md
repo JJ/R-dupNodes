@@ -41,5 +41,7 @@ Please cite this paper when using this package in your work
 }
 ```
 
-## Installation
+## License
+
+The contents of this repository are (c) JJ Merelo, 2024, and are released under the GPL 3 license. Please check the [LICENSE](LICENSE) for details.
 
