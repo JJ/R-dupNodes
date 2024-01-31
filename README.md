@@ -15,9 +15,19 @@ which has exactly the same degree; in this way, the weights of these self-loops
 can be taken into account when computing centrality measures such as
 betweenness.
 
+## Installation 
+
+Install released versions from CRAN as usual, or development version
+from here
+
+```R
+library(devtools)
+install_github("JJ/R-dupNodes")
+```
+
 ## Reference
 
-Please cite this paper when using this package
+Please cite this paper when using this package in your work
 
 ```bibtex
 @Article{mm24:intra_family_links,
@@ -30,4 +40,6 @@ Please cite this paper when using this package
   month =     {January}
 }
 ```
+
+## Installation
 
