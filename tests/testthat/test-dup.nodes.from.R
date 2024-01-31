@@ -28,3 +28,16 @@ test_that("Does not change if no self-loops", {
   unchanged.graph <- dup.nodes.from.data.frame(df)
   expect_equal( length(V(unchanged.graph)), length(letters.3) )
 })
+
+V1 <- c("A", "A","B","B", "C","D","E")
+V2 <- c("A", "B","B","C","D","E","A")
+df <- data.frame(V1, V2)
+test <- graph_from_data_frame(df)
+
+test_that("Works with two connected nodes with self-loops", {
+  dup.graph <- dup.nodes.from.data.frame(df)
+  expect_equal( length(V(dup.graph)), length(unique(c(V1, V2)))+2 )
+  expect_equal( length(E(dup.graph)[ "A" %--% "B'"] ),1)
+  expect_equal( length(incident(dup.graph,"A")), length(incident(dup.graph,"A'")) + 1)
+  expect_equal( length(incident(dup.graph,"B")), length(incident(dup.graph,"B'")) + 1)
+})
