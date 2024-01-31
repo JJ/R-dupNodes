@@ -20,7 +20,8 @@ Imports:
     knitr,
     igraph,
     qpdf,
-    rmarkdown
+    rmarkdown,
+    dogesr
 VignetteBuilder: knitr
 RdMacros: Rdpack
 RoxygenNote: 7.2.3

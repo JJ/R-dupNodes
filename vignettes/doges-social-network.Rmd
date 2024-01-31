@@ -43,12 +43,12 @@ knitr::kable(table(family.marriages$Family.doge))
 
 Let's compute betweenness centrality, with and without self-loops, and see the difference, after extracting only those doges that actually married
 
-```{r betweenness}
+```{r betweenness,message=FALSE}
 library(igraph)
 married.doges <- data.doges[ data.doges$Family.dogaressa != '',]
 original.betweenness <- betweenness(
   graph_from_data_frame(
-    data.frame(married.doges$Family.doge, married.doges$Family.dogaressa, directed=FALSE)
+    data.frame(married.doges$Family.doge, married.doges$Family.dogaressa), directed=FALSE
     )
   )
 dnsl.betweenness <- DNSL.betweenness(
@@ -64,7 +64,14 @@ knitr::kable(head(sort(original.betweenness, decreasing=TRUE)))
 knitr::kable(head(sort(dnsl.betweenness, decreasing=TRUE)))
 ```
 
+There is a dramatic change, due to the fact that there were very few central families, and some of the most prominent had self-loops. We can see the graph with duplicated nodes here
 
+```{r graph}
+dup.graph <- dup.nodes.from.data.frame(
+  data.frame(married.doges$Family.doge, married.doges$Family.dogaressa)
+  )
+plot(dup.graph)
+```
 
 ## Conclusions
 
