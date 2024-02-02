@@ -52,5 +52,6 @@ access all of chem, or individually:
 
 ## License
 
-The contents of this repository are (c) JJ Merelo, 2024, and are released under the GPL 3 license. Please check the [LICENSE](LICENSE) for details.
+The contents of this repository are (c) JJ Merelo, 2024, and are released under
+the GPL 3 license.
 
