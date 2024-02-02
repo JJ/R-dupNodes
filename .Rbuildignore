@@ -7,3 +7,5 @@ img/
 CITATIONS.cff
 ^cran-comments\.md$
 ^CRAN-SUBMISSION$
+
+LICENSE
