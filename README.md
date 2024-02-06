@@ -17,8 +17,9 @@ betweenness.
 
 ## Installation
 
-Install released versions from CRAN as usual, or development version
-from here
+Install [released versions from CRAN as
+usual](https://cran.r-project.org/web/packages/dupNodes/index.html), or
+development version from here
 
 ```R
 library(devtools)
@@ -47,7 +48,8 @@ There are some examples explained in *vignettes*. Use `vignette("dupNodes")` to
 access all of chem, or individually:
 
 * `vignette("doges-social-network")` to apply functions here to data from the
-  package [`dogesr`](https://github.com/JJ/dogesr).
+  package [`dogesr`](https://github.com/JJ/dogesr); this is [the online
+  version](https://cran.r-project.org/web/packages/dupNodes/vignettes/doges-social-network.html)
 
 
 ## License
