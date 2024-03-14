@@ -1,4 +1,7 @@
-# R package: dupNodes [![Check and test package](https://github.com/JJ/R-dupNodes/actions/workflows/R-stuff.yml/badge.svg)](https://github.com/JJ/R-dupNodes/actions/workflows/R-stuff.yml)
+# R package: dupNodes  <!-- badges: start -->
+  [![CRAN status](https://www.r-pkg.org/badges/version/dupNodes)](https://CRAN.R-project.org/package=dupNodes)
+[![Check and test package](https://github.com/JJ/R-dupNodes/actions/workflows/R-stuff.yml/badge.svg)](https://github.com/JJ/R-dupNodes/actions/workflows/R-stuff.yml)
+  <!-- badges: end -->
 
 `dupNodes` is the companion package to paper "Intra-family links in the analysis
 of marital networks", with [reference here](inst/REFERENCES.bib).
