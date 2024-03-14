@@ -15,7 +15,11 @@ dup.nodes.from.graph <- function( graph.with.self.loops ) {
   original.edges <- as_edgelist(modified.graph)
   self.edges <- original.edges[ which_loop(modified.graph),]
 
-  nodes.with.self.loops <- unique(self.edges[,1])
+  if (length(self.edges) == 2) {
+    nodes.with.self.loops <- self.edges[1]
+  } else {
+    nodes.with.self.loops <- unique(self.edges[,1])
+  }
   # First add nodes
   for ( node in nodes.with.self.loops ) {
     new.node <- paste0(node,"'")
@@ -40,10 +44,17 @@ dup.nodes.from.graph <- function( graph.with.self.loops ) {
     }
   }
 
-  for ( node in  self.edges[,1]) {
-    new.node <- paste0(node,"'")
-    modified.graph <- add_edges(modified.graph, c(node,new.node))
-    modified.graph <- delete_edges(modified.graph, paste0(node,"|",node))
+  if (length(self.edges) == 2) {
+    new.node <- paste0(self.edges[1],"'")
+    modified.graph <- add_edges(modified.graph, c(self.edges[1],new.node))
+    modified.graph <- delete_edges(modified.graph, paste0(self.edges[1],"|",self.edges[2]))
+
+  } else {
+    for ( node in  self.edges[,1]) {
+      new.node <- paste0(node,"'")
+      modified.graph <- add_edges(modified.graph, c(node,new.node))
+      modified.graph <- delete_edges(modified.graph, paste0(node,"|",node))
+    }
   }
 
   return( modified.graph )

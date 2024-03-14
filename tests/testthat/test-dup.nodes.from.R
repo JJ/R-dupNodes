@@ -60,3 +60,14 @@ test_that("it duplicates nodes from an existing graph", {
   expect_equal( length(E(dup.graph)[ "A" %--% "B'"] ),1)
   expect_equal( length(E(dup.graph)[ "A'" %--% "B'"] ),1)
 })
+
+V1 <- c("A", "A","B","C","D","E")
+V2 <- c("A", "B","C","D","E","A")
+
+graph.with.self.loops <- graph_from_data_frame(data.frame(V1, V2), directed=FALSE)
+test_that("it works also with a single self-loop", {
+  dup.graph <- dup.nodes.from.graph(graph.with.self.loops)
+  expect_equal( length(V(dup.graph)), length(unique(c(V1, V2)))+1 )
+  expect_equal( length(E(dup.graph)[ "A" %--% "A'"] ),1)
+  expect_equal( length(incident(dup.graph,"A")), length(incident(dup.graph,"A'")))
+})
