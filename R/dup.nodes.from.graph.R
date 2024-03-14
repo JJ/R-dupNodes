@@ -36,9 +36,6 @@ dup.nodes.from.graph <- function( graph.with.self.loops ) {
     for ( vertex in original.edges[ original.edges[,2] == node,1] ) {
       if ( vertex != node ) {
         modified.graph <- add_edges(modified.graph, c(new.node,vertex))
-        if ( vertex %in% nodes.with.self.loops ) {
-          modified.graph <- add_edges(modified.graph, c(new.node,paste0(vertex,"'")))
-        }
       }
     }
   }
