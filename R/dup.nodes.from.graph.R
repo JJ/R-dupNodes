@@ -49,5 +49,5 @@ dup.nodes.from.graph <- function( graph.with.self.loops ) {
     modified.graph <- delete_edges(modified.graph, paste0(node,"|",node))
   }
 
-
+  return( modified.graph )
 }
