@@ -6,7 +6,11 @@
  * - Keep the source similar to black.css - for easy comparison.
  * - $mainFontSize controls code blocks, too (although under some ratio).
  */
-@import url(./fonts/source-sans-pro/source-sans-pro.css);
+@import url(https://fonts.googleapis.com/css2?family=Italiana);
+@import url(https://fonts.googleapis.com/css2?family=Bona+Nova)
+@import url(https://fonts.googleapis.com/css2?family=Josefin+Sans)
+@import url(https://fonts.googleapis.com/css2?family=Luxurious+Roman)
+
 section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, section.has-light-background h5, section.has-light-background h6 {
   color: #000;
 }
@@ -16,12 +20,11 @@ section.has-light-background, section.has-light-background h1, section.has-light
  *********************************************/
 :root {
   --r-background-color: #000000;
-  --r-main-font: Source Sans Pro, Helvetica, sans-serif;
-  --r-main-font-size: 42px;
+  --r-main-font: "Bona Nova", sans-serif;
+  --r-main-font-size: 36px;
   --r-main-color: #fff;
   --r-block-margin: 20px;
   --r-heading-margin: 0 0 20px 0;
-  --r-heading-font: Source Sans Pro, Helvetica, sans-serif;
   --r-heading-color: #fff;
   --r-heading-line-height: 1.2;
   --r-heading-letter-spacing: normal;
@@ -83,7 +86,6 @@ section.has-light-background, section.has-light-background h1, section.has-light
 .reveal h6 {
   margin: var(--r-heading-margin);
   color: var(--r-heading-color);
-  font-family: var(--r-heading-font);
   font-weight: var(--r-heading-font-weight);
   line-height: var(--r-heading-line-height);
   letter-spacing: var(--r-heading-letter-spacing);
@@ -92,11 +94,14 @@ section.has-light-background, section.has-light-background h1, section.has-light
 }
 
 .reveal h1 {
-  font-size: var(--r-heading1-size);
+    font-size: var(--r-heading1-size);
+    font-family: "Italiana", sans-serif;
+    font-style: normal;
 }
 
 .reveal h2 {
-  font-size: var(--r-heading2-size);
+    font-size: var(--r-heading2-size);
+    font-family: "Bona Nova", serif;
 }
 
 .reveal h3 {
