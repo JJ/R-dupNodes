@@ -35,7 +35,7 @@ library(dupNodes)
 library(igraph)
 data("florentine.sn")
 
-# All families linked to the Contarinis
+# All families linked to the Medici
 incident(florentine.sn,as.numeric(V(florentine.sn)["MEDICI"]))
 
 # Self loops
