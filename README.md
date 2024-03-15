@@ -6,7 +6,8 @@
 `dupNodes` is the companion package to paper "Intra-family links in the analysis
 of marital networks", with [reference here](inst/REFERENCES.bib).
 
-It creates duplicates of nodes that have self loops such as the one in this graph
+It creates duplicates of nodes that have self loops in undirected graphs such as
+the one here
 
 ![A with self loop](img/self-loops.png)
 
