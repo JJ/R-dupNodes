@@ -9,3 +9,7 @@ CITATIONS.cff
 ^CRAN-SUBMISSION$
 
 LICENSE
+
+.idea/
+
+data-raw/

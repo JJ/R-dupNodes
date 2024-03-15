@@ -1,11 +1,6 @@
 library(igraph)
 
-#' Duplicates nodes that have any self-loop
-#' @param graph.with.self.loops graph that includes some selfloops.
-#' @return Graph where all nodes with self-loops have been duplicated and linked to the original one and all those linked to it.
-#' @export
-#'
-#
+# Duplicate nodes with self-loops from a existing graph
 
 dup.nodes.from.graph <- function( graph.with.self.loops ) {
   if ( !any_loop(graph.with.self.loops) ) {
