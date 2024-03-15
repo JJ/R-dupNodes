@@ -37,6 +37,9 @@ data("florentine.sn")
 
 # All families linked to the Contarinis
 incident(florentine.sn,as.numeric(V(florentine.sn)["MEDICI"]))
+
+# Self loops
+E(florentine.sn)[which_loop(florentine.sn)]
 }
 
 \keyword{ Florence }
