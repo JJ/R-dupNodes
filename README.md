@@ -3,6 +3,8 @@
 [![Check and test package](https://github.com/JJ/R-dupNodes/actions/workflows/R-stuff.yml/badge.svg)](https://github.com/JJ/R-dupNodes/actions/workflows/R-stuff.yml)
   <!-- badges: end -->
 
+> Browse this [from the web](https://jj.github.io/R-dupNodes/)
+
 `dupNodes` is the companion package to paper ["Intra-family links in the analysis
 of marital networks"](https://doi.org/10.1007/s42001-023-00245-4), with
 [reference here](inst/REFERENCES.bib).
@@ -56,7 +58,7 @@ access all of chem, or individually:
    [`dogesr`](https://cran.r-project.org/package=dogesr) package; this is [the online
   version](https://cran.r-project.org/package=dupNodes/vignettes/doges-social-network.html)
 * `vignette("florentine-social-network")`, which uses data from the well-known
-  Florentine social network, with a (documented) self-loop added.
+  Florentine social network, with a (documented) self-loop added; browse it [in CRAN](https://cran.r-project.org/package=dupNodes/vignettes/florentine-social-network.html)
 
 ## License
 
