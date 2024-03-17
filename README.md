@@ -3,8 +3,9 @@
 [![Check and test package](https://github.com/JJ/R-dupNodes/actions/workflows/R-stuff.yml/badge.svg)](https://github.com/JJ/R-dupNodes/actions/workflows/R-stuff.yml)
   <!-- badges: end -->
 
-`dupNodes` is the companion package to paper "Intra-family links in the analysis
-of marital networks", with [reference here](inst/REFERENCES.bib).
+`dupNodes` is the companion package to paper ["Intra-family links in the analysis
+of marital networks"](https://doi.org/10.1007/s42001-023-00245-4), with
+[reference here](inst/REFERENCES.bib).
 
 It creates duplicates of nodes that have self loops in undirected graphs such as
 the one here
