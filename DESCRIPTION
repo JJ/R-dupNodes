@@ -14,15 +14,15 @@ LazyData: true
 Depends:
     R (>= 3.5.0)
 Suggests:
-    testthat (>= 3.0.0)
-Config/testthat/edition: 3
-Imports:
-    Rdpack,
+    testthat (>= 3.0.0),
     knitr,
-    igraph,
     qpdf,
     rmarkdown,
     dogesr
+Config/testthat/edition: 3
+Imports:
+    igraph,
+    Rdpack
 VignetteBuilder: knitr
 RdMacros: Rdpack
 RoxygenNote: 7.2.3
