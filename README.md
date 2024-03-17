@@ -22,7 +22,7 @@ betweenness.
 ## Installation
 
 Install [released versions from CRAN as
-usual](https://cran.r-project.org/web/packages/dupNodes/index.html), or
+usual](https://cran.r-project.org/package=dupNodes), or
 development version from here
 
 ```R
@@ -52,9 +52,10 @@ There are some examples explained in *vignettes*. Use `vignette("dupNodes")` to
 access all of chem, or individually:
 
 * `vignette("doges-social-network")` to apply functions here to data from the
-   [`dogesr`](https://cran.r-project.org/web/packages/dogesr/index.html) package; this is [the online
-  version](https://cran.r-project.org/web/packages/dupNodes/vignettes/doges-social-network.html)
-
+   [`dogesr`](https://cran.r-project.org/package=dogesr) package; this is [the online
+  version](https://cran.r-project.org/package=dupNodes/vignettes/doges-social-network.html)
+* `vignette("florentine-social-network")`, which uses data from the well-known
+  Florentine social network, with a (documented) self-loop added.
 
 ## License
 
