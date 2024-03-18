@@ -1,0 +1,5 @@
+install.packages("dogesr")
+library(dogesr)
+library(igraph)
+data("doges.marriages")
+plot(doges.marriages.sn,vertex.label.cex=0.7,vertex.size=8,vertex.color=rgb(0.7,0,0,0.5))
