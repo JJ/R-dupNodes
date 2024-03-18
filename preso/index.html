@@ -67,13 +67,17 @@
 
                 <section><h1>¿Se ve este mito en sus redes
                     sociales?</h1>
-                <pre><code>install.packages("dogesr")
+                    <pre><code>install.packages("dogesr")
 library(dogesr)
 library(igraph)
 data("doges.marriages")
 plot(doges.marriages.sn,vertex.label.cex=0.7,vertex.size=8,vertex.color=rgb(0.7,0,0,0.5))</code></pre>
-                <img src="img/doges-sn.png" alt="Las redes sociales de los
-                          dogos">
+                    <div class="r-stack">
+                        <img src="img/doges-sn.png" alt="Las redes sociales de los
+                                  dogos" class="fragment" data-fragment-index="0">
+                        <img src="img/doges-sn-bucles.png" alt="Las redes sociales de los
+                                  dogos con bucles" class="fragment" data-fragment-index="1">
+                    </div>
                 </section>
 
                <section
