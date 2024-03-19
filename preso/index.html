@@ -127,9 +127,7 @@ V(colleganza.graph)$DNSLbetweenness <- betweenness.with.duplicated.nodes(collega
 groups <- components(colleganza.graph, mode="weak")
 biggest_cluster_id <- which.max(groups$csize)
 vert_ids <- V(colleganza.graph)[groups$membership == biggest_cluster_id]
-connected.colleganza.graph <- induced_subgraph(colleganza.graph, vert_ids)
-
-plot(connected.colleganza.graph,vertex.label.cex=0.7,vertex.size=V(connected.colleganza.graph)$DNSLbetweenness/300,vertex.color=rgb(0.7,0,0,0.5))</code></pre>
+connected.colleganza.graph <- induced_subgraph(colleganza.graph, vert_ids)</code></pre>
                    <blockquote>Merelo-Guervós, Juan Julián, and Mario García-Valdez. "Agile (data) science: A (draft) manifesto." arXiv preprint arXiv:2104.12545 (2021).</blockquote>
                        <aside class="notes">En este caso, en vez de trabajar con
                    el paper primero y luego desarrollar según el paper lo
