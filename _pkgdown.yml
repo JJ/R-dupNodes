@@ -1,0 +1,4 @@
+pkgdown::url: https://jj.github.io/r-dupNodes
+template:
+  bootstrap: 5
+

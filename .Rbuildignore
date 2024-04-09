@@ -15,3 +15,6 @@ LICENSE
 data-raw/
 
 preso/
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
