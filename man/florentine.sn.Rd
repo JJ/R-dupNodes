@@ -3,7 +3,7 @@
 \title{Data on matrimonial and commercial links of Florentine families}
 
 \description{
-Florentine matrimonial links as an \code{igraph} object; it includes marriages as well as commercial links between families as recorded by Padgett and Ansell \cite{padgett1993robust} and published by \cite{Wang2022}. It has been enriched with the Medici family genealogy, adding a single self-loop to the Medici family.
+Florentine matrimonial links as an \code{igraph} object; it includes marriages as well as commercial links between Florentine families.
 }
 
 \usage{
@@ -11,6 +11,8 @@ data("florentine.sn")
 }
 
 \details{
+Florentine matrimonial links as an \code{igraph} object; it includes marriages as well as commercial links between Florentine families as recorded by Padgett and Ansell \insertCite{padgett1993robust} and published by \insertCite{Wang2022}. It has been enriched with the Medici family genealogy, adding a single self-loop to the Medici family.
+
 This is an igraph object where vertices are Florentine families, and edges link two families that have some kind of relationship, either matrimonial or commercial.
 }
 
