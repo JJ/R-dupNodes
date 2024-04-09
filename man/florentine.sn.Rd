@@ -11,13 +11,13 @@ data("florentine.sn")
 }
 
 \details{
-Florentine matrimonial links as an \code{igraph} object; it includes marriages as well as commercial links between Florentine families as recorded by Padgett and Ansell \insertCite{padgett1993robust}{dupNodes} and published by \insertCite{Wang2022}{dupNodes}. It has been enriched with the Medici family genealogy, adding a single self-loop to the Medici family.
+Florentine matrimonial links as an \code{igraph} object; it includes marriages as well as commercial links between Florentine families as recorded by Padgett and Ansell \insertCite{padgett1993robust}{dupNodes} and published by \insertCite{Wang2022}{dupNodes}. It has been enriched with the Medici family genealogy, adding a single self-loop to it.
 
-This is an igraph object where vertices are Florentine families, and edges link two families that have some kind of relationship, either matrimonial or commercial.
+This is an \code{igraph} object where vertices are Florentine families, and edges link two families that have some kind of relationship, either matrimonial or commercial.
 }
 
 \value{
-A list that can be used as an igraph object, with noble family names as vertices and edges indicating links
+A list that can be used as an \code{igraph} object, with noble family names as vertices and edges indicating links.
 }
 
 \references{

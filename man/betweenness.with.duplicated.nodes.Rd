@@ -12,6 +12,8 @@ betweenness.with.duplicated.nodes(dup.graph)
 }
 \details{
 This method computes betweenness centrality in the regular way for the graph that includes duplicated nodes; it will only return values for the "original" nodes, however.
+
+This object should be created with the function \code{\link{dup.nodes.from.data.frame}} or \code{\link{dup.nodes.from.graph}}
 }
 \value{A list with betweenness values indexed by node name.}
 
