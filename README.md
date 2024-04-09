@@ -3,7 +3,8 @@
 [![Check and test package](https://github.com/JJ/R-dupNodes/actions/workflows/R-stuff.yml/badge.svg)](https://github.com/JJ/R-dupNodes/actions/workflows/R-stuff.yml)
   <!-- badges: end -->
 
-> Browse this [from the web](https://jj.github.io/R-dupNodes/)
+> Browse this [from the web](https://jj.github.io/R-dupNodes/) or browse the
+> [generated documentation](https://jj.github.io/R-dupNodes/docs)
 
 `dupNodes` is the companion package to paper ["Intra-family links in the analysis
 of marital networks"](https://doi.org/10.1007/s42001-023-00245-4), with
