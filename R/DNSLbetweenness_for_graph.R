@@ -7,6 +7,6 @@ library(igraph)
 DNSLbetweenness_for_graph <- function( graph.with.self.loops ) {
   dup.graph <- dup.nodes.from.graph( graph.with.self.loops )
   betweenness <- betweenness(dup.graph)
-  original.nodes <- V(dup.graph)[ !grepl("'", V(dup.graph)$name) ]
+  original.nodes <- .original_graph_nodes(dup.graph)
   return( betweenness[ original.nodes ] )
 }
