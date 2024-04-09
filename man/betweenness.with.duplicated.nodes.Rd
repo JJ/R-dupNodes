@@ -2,7 +2,7 @@
 \alias{betweenness.with.duplicated.nodes}
 \title{Computes betweenness of an igraph object that already has duplicated nodes}
 \description{
-This is an implementation of the method published in the paper "Intra-family links in the analysis of marital networks" \insertCite{m24:intra_family_links}, which proposed a duplication of nodes that includes self-loops to get a reflect better (and include all information about) the status of all nodes in the network, computing betweenness ignoring the duplicated nodes.
+This is an implementation of the method published in the paper "Intra-family links in the analysis of marital networks" \insertCite{m24:intra_family_links}{dupNodes}, which proposed a duplication of nodes that includes self-loops to get a reflect better (and include all information about) the status of all nodes in the network, computing betweenness ignoring the duplicated nodes.
 }
 \usage{
 betweenness.with.duplicated.nodes(dup.graph)
