@@ -24,8 +24,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Check default user
-        run: ls -alt
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Build with Jekyll
@@ -47,9 +45,9 @@ jobs:
           needs: website
 
       - name: Build site
-        run: pkgdown::build_site_github_pages(new_process = FALSE, install = FALSE, dest_dir="_site")
+        run: pkgdown::build_site_github_pages(new_process = FALSE, install = FALSE, dest_dir="_site/docs")
         shell: Rscript {0}
-        
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
