@@ -30,7 +30,7 @@ data("florentine.sn")
 
 This loads this library, as well as loads the `igraph` object `florentine.sn`, containing the data we're interested in.
 
-```{r self.loops}
+```{r self.loops, fig.dim=c(8,6)}
 library(igraph)
 print(V(florentine.sn))
 print(E(florentine.sn))
