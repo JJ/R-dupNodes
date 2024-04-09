@@ -2,7 +2,7 @@
 \alias{dup.nodes.from.graph}
 \title{Creates an igraph object from a igraph some of whose nodes have self-loops}
 \description{
-This is an implementation of the method published in the paper "Intra-family links in the analysis of marital networks", which proposed a duplication of nodes that includes self-loops to get a reflect better (and include all information about) the status of all nodes in the network.
+This is an implementation of the method published in the paper "Intra-family links in the analysis of marital networks" \insertCite{mm24:intra_family_links}{dupNodes}, which proposed a duplication of nodes that includes self-loops to get a reflect better (and include all information about) the status of all nodes in the network.
 }
 \usage{
 dup.nodes.from.graph(graph.with.self.loops)
