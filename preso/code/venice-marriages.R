@@ -8,4 +8,4 @@ V(venice.marriages.sn)$DNSLbetweenness <- betweenness.with.duplicated.nodes(dup.
 top.marriages <- V(venice.marriages.sn)[V(venice.marriages.sn)$DNSLbetweenness > 500]
 top.marriages.sn <- simplify(induced_subgraph(venice.marriages.sn, top.marriages))
 
-plot(top.marriages.sn,vertex.label.cex=0.7,vertex.size=V(top.marriages.sn)$DNSLbetweenness/250,vertex.color=rgb(0.7,0,0,0.5))
+plot(top.marriages.sn,vertex.size=V(top.marriages.sn)$DNSLbetweenness/250,vertex.color=rgb(0.7,0,0,0.5))
