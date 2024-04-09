@@ -25,7 +25,7 @@ A list that can be used as an igraph object, with noble family names as vertices
 }
 \author{J. J. Merelo}
 \note{
-Data originally from the Wikipedia page on the Medici family, and the Padgett and Ansell paper.
+Data originally from the Wikipedia page on the Medici family, and the Padgett and Ansell paper as codified in the Wang dataset.
 }
 
 \seealso{
