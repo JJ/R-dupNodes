@@ -3,7 +3,7 @@
 [![Check and test package](https://github.com/JJ/R-dupNodes/actions/workflows/R-stuff.yml/badge.svg)](https://github.com/JJ/R-dupNodes/actions/workflows/R-stuff.yml)
   <!-- badges: end -->
 
-> Browse this [from the web](https://jj.github.io/R-dupNodes/) or browse the
+> Browse this [from the web](https://jj.github.io/R-dupNodes/) or check out the
 > [generated documentation](https://jj.github.io/R-dupNodes/docs/)
 
 `dupNodes` is the companion package to paper ["Intra-family links in the analysis
@@ -13,15 +13,15 @@ of marital networks"](https://doi.org/10.1007/s42001-023-00245-4), with
 It creates duplicates of nodes that have self loops in undirected graphs such as
 the one here
 
-![A with self loop](img/self-loops.png)
+![Node A has a self loop](img/self-loops.png)
 
 in this way
 
 ![Duplicated node](img/dup-nodes.png)
 
-which has exactly the same degree; in this way, the weights of these self-loops
-can be taken into account when computing centrality measures such as
-betweenness.
+which has exactly the same degree and connections; in this way, the weights of
+these self-loops can be taken into account when computing centrality measures
+such as betweenness.
 
 ## Installation
 
