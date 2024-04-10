@@ -4,7 +4,7 @@
   <!-- badges: end -->
 
 > Browse this [from the web](https://jj.github.io/R-dupNodes/) or browse the
-> [generated documentation](https://jj.github.io/R-dupNodes/docs)
+> [generated documentation](https://jj.github.io/R-dupNodes/docs/)
 
 `dupNodes` is the companion package to paper ["Intra-family links in the analysis
 of marital networks"](https://doi.org/10.1007/s42001-023-00245-4), with
@@ -44,7 +44,7 @@ Please cite this paper when using this package in your work
   title =        {Intra-family links in the analysis of marital networks},
   journal =      {Journal of computational social science},
   year =         2024,
-  url= {https://rdcu.be/dwYth},
+  url= {https://link.springer.com/epdf/10.1007/s42001-023-00245-4},
   doi= {https://doi.org/10.1007/s42001-023-00245-4},
   month =     {January}
 }
