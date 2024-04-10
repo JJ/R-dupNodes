@@ -6,6 +6,13 @@
 > Browse this [from the web](https://jj.github.io/R-dupNodes/) or check out the
 > [generated documentation](https://jj.github.io/R-dupNodes/docs/)
 
+If you have an undirected network with self loops, that is, nodes connected to
+themselves, the usual practice is to just drop them, eschewing thus the
+information they provide, whith is interesting for the evolution of the network
+as well as the relationship of centrality measures to status. What we propose in
+this package is a method that helps you take into account those edges when
+computing betweenness centrality.
+
 `dupNodes` is the companion package to paper ["Intra-family links in the analysis
 of marital networks"](https://doi.org/10.1007/s42001-023-00245-4), with
 [reference here](inst/REFERENCES.bib).
