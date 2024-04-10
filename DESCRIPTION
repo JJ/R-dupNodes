@@ -1,6 +1,6 @@
 Package: dupNodes
 Type: Package
-Title: Computes DNSLbetweenness, a betweenness measure that includes self-loops
+Title: Computes DNSLbetweenness, a Betweenness Measure that Includes Self-Loops
 Version: 0.3.0
 Author: Juan Julián Merelo-Guervós
 Maintainer: Juan Julián Merelo-Guervós <jjmerelo@gmail.com>
