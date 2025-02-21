@@ -8,7 +8,7 @@ Computes the betweenness of nodes in a graph that includes self-loops directly.
 DNSLbetweenness_for_graph(graph.with.self.loops)
 }
 \arguments{
-\item{graph.with.self.loops}{An \code{igraph} object some of whose nodes have connections with themselves (self-loops).}
+\item{graph.with.self.loops}{An \code{igraph} object some of whose nodes have connections with themselves (self-loops). These nodes need to have a \code{name} attribute; this is created automatically in \code{igraph} if you use that for graph generation, but if the graph has been created from other sources it might not have that attribute. As a workaround, simply assign whatever node attribute works as name to the name.}
 }
 \details{
 This method computes betweenness centrality via the duplicated nodes method \insertCite{mm24:intra_family_links}{dupNodes} for a `igraph` object. Use it when you want to just apply the DNSLbetweenness method to an already built graph. The intermediate graph obtained by duplicating nodes is hidden and discarded.
