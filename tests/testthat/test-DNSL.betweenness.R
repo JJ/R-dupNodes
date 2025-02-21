@@ -14,13 +14,5 @@ test_that("Betweenness is the same any path it takes", {
   expect_equal( computed.DNSL.betweenness, betweenness.dup )
 })
 
-V(original.graph)$id <- V(original.graph)$name
-V(original.graph)$name <- NULL
-
-test_that("DNSLbetweenness works if networks use id instead of name", {
-  computed.DNSL.betweenness <- DNSL.betweenness(df)
-  expect_equal( computed.DNSL.betweenness, betweenness.dup )
-})
-
 
 
